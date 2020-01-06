@@ -2,7 +2,8 @@
 
 > Minify images seamlessly
 
-基于 imagemin ，增加源图片的输出。
+1、基于 imagemin ，增加源图片的输出。
+2、如果未设置输出路径，源文件将被覆盖。
 
 ## Install
 
@@ -55,7 +56,7 @@ Type: `object`
 
 Type: `string`
 
-Set the destination folder to where your files will be written. If no destination is specified, no files will be written.
+Set the destination folder to where your files will be written. If no destination is specified, files will be Covered.
 
 ##### plugins
 

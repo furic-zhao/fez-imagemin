@@ -20,7 +20,7 @@ const handleFile = async (sourcePath, {destination, plugins = []}) => {
 	const originData = await readFile(sourcePath);
 	let data = await (plugins.length > 0 ? pPipe(...plugins)(originData) : originData);
 
-	let destinationPath = destination ? path.join(destination, path.basename(sourcePath)) : undefined;
+	let destinationPath = destination ? path.join(destination, path.basename(sourcePath)) : sourcePath;
 	destinationPath = (fileType(data) && fileType(data).ext === 'webp') ? replaceExt(destinationPath, '.webp') : destinationPath;
 
 	const returnValue = {
